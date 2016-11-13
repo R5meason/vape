@@ -1,0 +1,41 @@
+*{
+    border: 1px solid black;
+}
+
+#login_header {
+    height: 25vh;
+    text-align: center;
+}
+
+#login {
+    text-align: center;
+    height: 60vh;
+
+}
+
+#login input {
+    height: 5vh;
+    width: 50vw;
+    font-size: 1em;
+    border: 2px solid black;
+}
+
+#email_input {
+    margin-top: 10%;
+}
+
+#password_input {
+    margin-top: 2%;
+}
+
+#login_submit{
+    /*width: 15%;*/
+    /*height: 5%;*/
+    padding: 2%;
+}
+
+#login_footer {
+    height: 10vh;
+    text-align: center;
+
+}
