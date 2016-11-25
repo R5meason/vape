@@ -39,4 +39,10 @@ var add = function (name, brand, nic, rating, ratio, size, note) {
 };
     fbRef.ref('juice').push(data);
     document.getElementById('name').value = "";
+    document.getElementById('brand').value = "";
+    document.getElementById('nic').value = "";
+    document.getElementById('rating').value = "";
+    document.getElementById('ratio').value = "";
+    document.getElementById('size').value = "";
+    document.getElementById('note').value = "";
 };

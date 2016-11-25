@@ -1,16 +1,22 @@
-*{
+* {
     border: 1px solid black;
 }
 
+button {
+    border-radius: 5%;
+}
+
 #login_header {
-    height: 25vh;
+    height: 20vh;
     text-align: center;
+    background-color: black;
+    color: white;
 }
 
 #login {
     text-align: center;
     height: 60vh;
-
+    background-color: dodgerblue;
 }
 
 #login input {
@@ -28,14 +34,13 @@
     margin-top: 2%;
 }
 
-#login_submit{
-    /*width: 15%;*/
-    /*height: 5%;*/
+#login_submit {
     padding: 2%;
 }
 
 #login_footer {
-    height: 10vh;
+    height: 15vh;
     text-align: center;
-
+    background-color: black;
+    color: white;
 }
