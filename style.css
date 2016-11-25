@@ -44,3 +44,12 @@ button {
     background-color: black;
     color: white;
 }
+
+.user_nav {
+    height: 10vh;
+    background-color: black;
+}
+
+#add {
+    background-color: dodgerblue;
+}
