@@ -2,12 +2,12 @@
  * Created by Melynda Eason on 11/13/2016.
  */
 
-$( document ).ready(function() {
+$(document).ready(function () {
     retrieveData();
-    console.log( "Info Loaded" );
+    console.log("Info Loaded");
 });
 
-var vapeData={};
+var vapeData = {};
 
 // Initialize Firebase
 var config = {
@@ -20,11 +20,16 @@ var config = {
 firebase.initializeApp(config);
 var fbRef = firebase.database();
 
-var retrieveData = function() {
+var retrieveData = function () {
     fbRef.ref('juice').on('value', function (snapshot) {
-    })
+        vapeData.juice = snapshot.val();
+        console.log("Juice Data: ", vapeData.juice);
+    });
+    fbRef.ref('parts').on('value', function (snapshot) {
+        vapeData.juice = snapshot.val();
+        console.log("Parts Data: ", vapeData.juice);
+    });
 };
-
 
 var addJuice = function (name, brand, nic, rating, ratio, size, note) {
     var data = {
@@ -35,7 +40,7 @@ var addJuice = function (name, brand, nic, rating, ratio, size, note) {
         Ratio: ratio,
         Size: size,
         Notes: note
-};
+    };
     fbRef.ref('juice').push(data);
     document.getElementById('jName').value = "";
     document.getElementById('jBrand').value = "";
