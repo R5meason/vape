@@ -50,6 +50,14 @@ button {
     background-color: black;
 }
 
-#add {
+.user_main {
     background-color: dodgerblue;
+}
+
+#juiceAdd {
+    display: none;
+}
+
+#partsAdd {
+    display: none;
 }

@@ -10,11 +10,11 @@
 </head>
 <body>
 <header class="user_nav">
-    <button onclick="retrieveData()">Juice</button>
-    <button>Parts</button>
+    <button onclick="retrieveData('juice')">Juice</button>
+    <button onclick="retrieveData('parts')">Parts</button>
 </header>
 <main class="user_main">
-<div id="add">
+<div id="juiceAdd">
     <input type="text" placeholder="name" class="field" id="jName">
     <br>
     <input type="text" placeholder="brand" class="field" id=jBrand">
@@ -39,7 +39,7 @@
             document.getElementById('jNote').value
             )">Add</button>
 </div>
-<div id="parts">
+<div id="partsAdd">
     <input type="text" placeholder="name" class="field" id="pName">
     <br>
     <input type="text" placeholder="brand" class="field" id="pBrand">

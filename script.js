@@ -3,8 +3,8 @@
  */
 
 $(document).ready(function () {
-    retrieveData();
-    console.log("Info Loaded");
+    // retrieveData();
+    // console.log("Info Loaded");
 });
 
 var vapeData = {};
@@ -20,15 +20,21 @@ var config = {
 firebase.initializeApp(config);
 var fbRef = firebase.database();
 
-var retrieveData = function () {
-    fbRef.ref('juice').on('value', function (snapshot) {
-        vapeData.juice = snapshot.val();
-        console.log("Juice Data: ", vapeData.juice);
-    });
-    fbRef.ref('parts').on('value', function (snapshot) {
-        vapeData.juice = snapshot.val();
-        console.log("Parts Data: ", vapeData.juice);
-    });
+var retrieveData = function (section) {
+    if (section === "juice") {
+
+        fbRef.ref('juice').on('value', function (snapshot) {
+            vapeData.juice = snapshot.val();
+            console.log("Juice Data: ", vapeData.juice);
+        });
+    }
+    else if (section === "parts") {
+        fbRef.ref('parts').on('value', function (snapshot) {
+            vapeData.parts = snapshot.val();
+            console.log("Parts Data: ", vapeData.parts);
+        });
+    }
+    console.log(section);
 };
 
 var addJuice = function (name, brand, nic, rating, ratio, size, note) {
