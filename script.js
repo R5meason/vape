@@ -26,8 +26,7 @@ var retrieveData = function() {
 };
 
 
-var add = function (name, brand, nic, rating, ratio, size, note) {
-    // console.log(name, brand, nic, rating, ratio, size, note);
+var addJuice = function (name, brand, nic, rating, ratio, size, note) {
     var data = {
         Name: name,
         Brand: brand,
@@ -44,5 +43,19 @@ var add = function (name, brand, nic, rating, ratio, size, note) {
     document.getElementById('rating').value = "";
     document.getElementById('ratio').value = "";
     document.getElementById('size').value = "";
+    document.getElementById('note').value = "";
+};
+
+var addParts = function (name, brand, type, note) {
+    var data = {
+        Name: name,
+        Brand: brand,
+        Type: type,
+        Notes: note
+    };
+    fbRef.ref('parts').push(data);
+    document.getElementById('name').value = "";
+    document.getElementById('brand').value = "";
+    document.getElementById('type').value = "";
     document.getElementById('note').value = "";
 };

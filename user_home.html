@@ -13,7 +13,7 @@
     <button onclick="retrieveData()">Juice</button>
     <button>Parts</button>
 </header>
-<main class="user_main"></main>
+<main class="user_main">
 <div id="add">
     <input type="text" placeholder="name" class="field" id="name">
     <br>
@@ -29,7 +29,7 @@
     <br>
     <input type="text" placeholder="notes" class="field" id="note">
     <br>
-    <button onclick="add(
+    <button onclick="addJuice(
             document.getElementById('name').value,
             document.getElementById('brand').value,
             document.getElementById('nic').value,
@@ -44,25 +44,17 @@
     <br>
     <input type="text" placeholder="brand" class="field" id="brand">
     <br>
-    <input type="text" placeholder="nicotine level" class="field" id="nic">
-    <br>
-    <input type="text" placeholder="rating (1-3)" class="field" id="rating">
-    <br>
-    <input type="text" placeholder="ratio" class="field" id="ratio">
-    <br>
-    <input type="text" placeholder="size" class="field" id="size">
+    <input type="text" placeholder="type" class="field" id="type">
     <br>
     <input type="text" placeholder="notes" class="field" id="note">
     <br>
-    <button onclick="add(
+    <button onclick="addParts(
             document.getElementById('name').value,
             document.getElementById('brand').value,
-            document.getElementById('nic').value,
-            document.getElementById('rating').value,
-            document.getElementById('ratio').value,
-            document.getElementById('size').value,
+            document.getElementById('type').value,
             document.getElementById('note').value
             )">Add</button>
 </div>
+</main>
 </body>
 </html>
