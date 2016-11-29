@@ -37,13 +37,13 @@ var addJuice = function (name, brand, nic, rating, ratio, size, note) {
         Notes: note
 };
     fbRef.ref('juice').push(data);
-    document.getElementById('name').value = "";
-    document.getElementById('brand').value = "";
-    document.getElementById('nic').value = "";
-    document.getElementById('rating').value = "";
-    document.getElementById('ratio').value = "";
-    document.getElementById('size').value = "";
-    document.getElementById('note').value = "";
+    document.getElementById('jName').value = "";
+    document.getElementById('jBrand').value = "";
+    document.getElementById('jNic').value = "";
+    document.getElementById('jRating').value = "";
+    document.getElementById('jRatio').value = "";
+    document.getElementById('jSize').value = "";
+    document.getElementById('jNote').value = "";
 };
 
 var addParts = function (name, brand, type, note) {
@@ -54,8 +54,8 @@ var addParts = function (name, brand, type, note) {
         Notes: note
     };
     fbRef.ref('parts').push(data);
-    document.getElementById('name').value = "";
-    document.getElementById('brand').value = "";
-    document.getElementById('type').value = "";
-    document.getElementById('note').value = "";
+    document.getElementById('pName').value = "";
+    document.getElementById('pBrand').value = "";
+    document.getElementById('pType').value = "";
+    document.getElementById('pNote').value = "";
 };
