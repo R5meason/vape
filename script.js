@@ -21,20 +21,16 @@ firebase.initializeApp(config);
 var fbRef = firebase.database();
 
 var retrieveData = function (section) {
-    if (section === "juice") {
-
-        fbRef.ref('juice').on('value', function (snapshot) {
+    fbRef.ref(section).on('value', function (snapshot) {
+        if (section === "juice") {
             vapeData.juice = snapshot.val();
             console.log("Juice Data: ", vapeData.juice);
-        });
-    }
-    else if (section === "parts") {
-        fbRef.ref('parts').on('value', function (snapshot) {
+        }
+        else if (section === "parts") {
             vapeData.parts = snapshot.val();
             console.log("Parts Data: ", vapeData.parts);
-        });
-    }
-    console.log(section);
+        }
+    });
 };
 
 var addJuice = function (name, brand, nic, rating, ratio, size, note) {
