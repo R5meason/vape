@@ -5,7 +5,22 @@
 $( document ).ready(function() {
     retrieveData();
     console.log( "Info Loaded" );
+
+    var query = firebase.database().ref("juice").orderByKey();
+    query.once("value")
+        .then(function(snapshot) {
+            snapshot.forEach(function(childSnapshot) {
+                console.log(childSnapshot.key);
+                console.log(childSnapshot.val());
+                jkey = childSnapshot.key;
+                juiceData = childSnapshot.val();
+            });
+        });
 });
+
+
+
+
 
 var vapeData={};
 
