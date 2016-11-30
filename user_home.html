@@ -10,11 +10,12 @@
 </head>
 <body>
 <header class="user_nav">
-    <button onclick="retrieveData('juice')">Juice</button>
+    <!--<button onclick="retrieveData('juice')">Juice</button>-->
+    <button onclick="displayJuiceData()">Juice</button>
     <button onclick="retrieveData('parts')">Parts</button>
 </header>
 <main class="user_main">
-    <div id="addJuice">
+    <div id="juiceAdd">
         <input type="text" placeholder="name" class="field" id="jName">
         <br>
         <input type="text" placeholder="brand" class="field" id="jBrand">
@@ -59,6 +60,22 @@
         </button>
         <div class="confirm" id="pConfirm"></div>
     </div>
+    <div id="jInfo">
+        <table style="width:100%" id="juiceDisplay"> 
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Nic</th>
+                <th>Rating</th>
+                <th>Ratio</th>
+                <th>Size</th>
+                <th>Notes</th>
+            </tr>
+
+        </table>
+
+    </div>
+    <div id="pInfo"></div>
 </main>
 </body>
 </html>

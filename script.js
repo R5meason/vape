@@ -2,27 +2,42 @@
  * Created by Melynda Eason on 11/13/2016.
  */
 
-$( document ).ready(function() {
+$(document).ready(function () {
     retrieveData();
-    console.log( "Info Loaded" );
+    console.log("Info Loaded");
 
     var query = firebase.database().ref("juice").orderByKey();
     query.once("value")
-        .then(function(snapshot) {
-            snapshot.forEach(function(childSnapshot) {
+        .then(function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
                 console.log(childSnapshot.key);
                 console.log(childSnapshot.val());
-                jkey = childSnapshot.key;
-                juiceData = childSnapshot.val();
+                var info = childSnapshot.val();
+                nameHold.push(info.name);
+                brandHold.push(info.brand);
+                nicHold.push(info.nicotine);
+                ratingHold.push(info.rating);
+                ratioHold.push(info.ratio);
+                sizeHold.push(info.size);
+                notesHold.push(info.notes);
             });
         });
 });
 
 
+var nameHold = [];
+var brandHold = [];
+var nicHold = [];
+var ratingHold = [];
+var ratioHold = [];
+var sizeHold = [];
+var notesHold = [];
 
-
-
-var vapeData={};
+var displayJuiceData = function () {
+    for (var i = 0; i < nameHold.length; i++) {
+        console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
+    }
+};
 
 // Initialize Firebase
 var config = {
