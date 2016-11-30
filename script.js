@@ -2,12 +2,12 @@
  * Created by Melynda Eason on 11/13/2016.
  */
 
-$(document).ready(function () {
-    // retrieveData();
-    // console.log("Info Loaded");
+$( document ).ready(function() {
+    retrieveData();
+    console.log( "Info Loaded" );
 });
 
-var vapeData = {};
+var vapeData={};
 
 // Initialize Firebase
 var config = {
@@ -20,28 +20,22 @@ var config = {
 firebase.initializeApp(config);
 var fbRef = firebase.database();
 
-var retrieveData = function (section) {
-    fbRef.ref(section).on('value', function (snapshot) {
-        if (section === "juice") {
-            vapeData.juice = snapshot.val();
-            console.log("Juice Data: ", vapeData.juice);
-        }
-        else if (section === "parts") {
-            vapeData.parts = snapshot.val();
-            console.log("Parts Data: ", vapeData.parts);
-        }
-    });
+var retrieveData = function() {
+    fbRef.ref('juice').on('value', function (snapshot) {
+    })
 };
 
-var addJuice = function (name, brand, nic, rating, ratio, size, note) {
+
+var jAdd = function (name, brand, nic, rating, ratio, size, note) {
+    // console.log(name, brand, nic, rating, ratio, size, note);
     var data = {
-        Name: name,
-        Brand: brand,
-        Nicotine: nic,
-        Rating: rating,
-        Ratio: ratio,
-        Size: size,
-        Notes: note
+        name: name,
+        brand: brand,
+        nicotine: nic,
+        rating: rating,
+        ratio: ratio,
+        size: size,
+        notes: note
     };
     fbRef.ref('juice').push(data);
     document.getElementById('jName').value = "";
@@ -51,18 +45,20 @@ var addJuice = function (name, brand, nic, rating, ratio, size, note) {
     document.getElementById('jRatio').value = "";
     document.getElementById('jSize').value = "";
     document.getElementById('jNote').value = "";
+    document.getElementById("jConfirm").innerText = "Juice Info Added"
 };
 
-var addParts = function (name, brand, type, note) {
+var pAdd = function (name, brand, type, note) {
     var data = {
-        Name: name,
-        Brand: brand,
-        Type: type,
-        Notes: note
+        name: name,
+        brand: brand,
+        type: type,
+        notes: note
     };
     fbRef.ref('parts').push(data);
     document.getElementById('pName').value = "";
     document.getElementById('pBrand').value = "";
     document.getElementById('pType').value = "";
     document.getElementById('pNote').value = "";
+    document.getElementById("pConfirm").innerText = "Parts Info Added"
 };

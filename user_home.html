@@ -10,26 +10,26 @@
 </head>
 <body>
 <header class="user_nav">
-    <button onclick="retrieveData('juice')">Juice</button>
-    <button onclick="retrieveData('parts')">Parts</button>
+    <button onclick="retrieveData()">Juice</button>
+    <button>Parts</button>
 </header>
 <main class="user_main">
-<div id="juiceAdd">
-    <input type="text" placeholder="name" class="field" id="jName">
-    <br>
-    <input type="text" placeholder="brand" class="field" id=jBrand">
-    <br>
-    <input type="text" placeholder="nicotine level" class="field" id="jNic">
-    <br>
-    <input type="text" placeholder="rating (1-3)" class="field" id="jRating">
-    <br>
-    <input type="text" placeholder="ratio" class="field" id="jRatio">
-    <br>
-    <input type="text" placeholder="size" class="field" id="jSize">
-    <br>
-    <input type="text" placeholder="notes" class="field" id="jNote">
-    <br>
-    <button onclick="addJuice(
+    <div id="addJuice">
+        <input type="text" placeholder="name" class="field" id="jName">
+        <br>
+        <input type="text" placeholder="brand" class="field" id="jBrand">
+        <br>
+        <input type="text" placeholder="nicotine level" class="field" id="jNic">
+        <br>
+        <input type="text" placeholder="rating (1-3)" class="field" id="jRating">
+        <br>
+        <input type="text" placeholder="ratio" class="field" id="jRatio">
+        <br>
+        <input type="text" placeholder="size" class="field" id="jSize">
+        <br>
+        <input type="text" placeholder="notes" class="field" id="jNote">
+        <br>
+        <button onclick="jAdd(
             document.getElementById('jName').value,
             document.getElementById('jBrand').value,
             document.getElementById('jNic').value,
@@ -37,24 +37,27 @@
             document.getElementById('jRatio').value,
             document.getElementById('jSize').value,
             document.getElementById('jNote').value
-            )">Add</button>
-</div>
-<div id="partsAdd">
-    <input type="text" placeholder="name" class="field" id="pName">
-    <br>
-    <input type="text" placeholder="brand" class="field" id="pBrand">
-    <br>
-    <input type="text" placeholder="type" class="field" id="pType">
-    <br>
-    <input type="text" placeholder="notes" class="field" id="pNote">
-    <br>
-    <button onclick="addParts(
+            )">Add
+        </button>
+    </div>
+    <div id="partsAdd">
+        <input type="text" placeholder="name" class="field" id="pName">
+        <br>
+        <input type="text" placeholder="brand" class="field" id="pBrand">
+        <br>
+        <input type="text" placeholder="type" class="field" id="pType">
+        <br>
+        <input type="text" placeholder="notes" class="field" id="pNote">
+        <br>
+        <button onclick="pAdd(
             document.getElementById('pName').value,
             document.getElementById('pBrand').value,
             document.getElementById('pType').value,
             document.getElementById('pNote').value
-            )">Add</button>
-</div>
+            )">Add
+        </button>
+        <div class="confirm" id="pConfirm"></div>
+    </div>
 </main>
 </body>
 </html>
