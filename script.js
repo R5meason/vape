@@ -20,9 +20,17 @@ var config = {
 firebase.initializeApp(config);
 var fbRef = firebase.database();
 
-var retrieveData = function() {
-    fbRef.ref('juice').on('value', function (snapshot) {
-    })
+var retrieveData = function (section) {
+    fbRef.ref(section).on('value', function (snapshot) {
+        if (section === "juice") {
+            vapeData.juice = snapshot.val();
+            console.log("Juice Data: ", vapeData.juice);
+        }
+        else if (section === "parts") {
+            vapeData.parts = snapshot.val();
+            console.log("Parts Data: ", vapeData.parts);
+        }
+    });
 };
 
 
