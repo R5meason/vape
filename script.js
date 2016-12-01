@@ -13,7 +13,7 @@ $(document).ready(function () {
                 console.log(childSnapshot.key);
                 console.log(childSnapshot.val());
                 var info = childSnapshot.val();
-                nameHold.push(info.name);
+                nameHold.push(info.name+"<br>");
                 brandHold.push(info.brand);
                 nicHold.push(info.nicotine);
                 ratingHold.push(info.rating);
@@ -36,6 +36,7 @@ var notesHold = [];
 var displayJuiceData = function () {
     for (var i = 0; i < nameHold.length; i++) {
         console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
+
     }
 };
 
