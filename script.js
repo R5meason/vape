@@ -39,7 +39,7 @@ var displayJuiceData = function () {
     for (var i = 0; i < nameHold.length; i++) {
         // console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
         infoDisplay.push(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]+"<br>");
-        document.getElementById("jInfo").innerHTML = infoDisplay
+        document.getElementById("jInfo").innerHTML = infoDisplay.join("")
     }
 };
 
