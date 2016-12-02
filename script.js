@@ -13,7 +13,7 @@ $(document).ready(function () {
                 console.log(childSnapshot.key);
                 console.log(childSnapshot.val());
                 var info = childSnapshot.val();
-                nameHold.push(info.name+"<br>");
+                nameHold.push(info.name);
                 brandHold.push(info.brand);
                 nicHold.push(info.nicotine);
                 ratingHold.push(info.rating);
@@ -32,11 +32,14 @@ var ratingHold = [];
 var ratioHold = [];
 var sizeHold = [];
 var notesHold = [];
+var infoDisplay = [];
 
 var displayJuiceData = function () {
+    infoDisplay = [];
     for (var i = 0; i < nameHold.length; i++) {
-        console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
-
+        // console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
+        infoDisplay.push(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]+"<br>");
+        document.getElementById("jInfo").innerHTML = infoDisplay
     }
 };
 
