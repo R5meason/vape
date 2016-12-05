@@ -1,3 +1,12 @@
+var juiceEditDivOpen = false;
+var juiceAddDivOpen = false;
+var partsEditDivOpen = false;
+var partsAddDivOpen = false;
+
+
+
+
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCL2MDj_c4oPiHX4seu6TSQeuuEi51NjJk",
@@ -12,6 +21,35 @@ var fbRef = firebase.database();
 $(document).ready(function () {
 
     console.log("Info Loaded");
+
+    $('.displayBtn').click(function () {
+        var divId = $(this).attr("data-param");
+        $('#' + divId).show();
+        // divOpen = true;
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     var queryJ = firebase.database().ref("juice").orderByKey();
     queryJ.once("value")

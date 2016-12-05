@@ -10,9 +10,16 @@
 </head>
 <body>
 <header class="user_nav">
-    <!--<button onclick="retrieveData('juice')">Juice</button>-->
-    <button onclick="displayJuiceData()">Juice</button>
-    <button onclick="displayPartsData()">Parts</button>
+    <div class="button_divider">
+        <span>Juice: </span>
+        <button class="displayBtn" data-param="juiceAdd">Add</button>
+        <button class="displayBtn" data-param="" onclick="displayJuiceData()">View/Edit</button>
+    </div>
+    <div class="button_divider">
+        <span>Parts: </span>
+        <button class="displayBtn" data-param="partsAdd">Add</button>
+        <button class="displayBtn" data-param="" onclick="displayPartsData()">View/Edit</button>
+    </div>
 </header>
 <main class="user_main">
     <div id="juiceAdd">
@@ -61,19 +68,19 @@
         <div class="confirm" id="pConfirm"></div>
     </div>
     <div id="jInfo">
-        <div class="info_display" id = "j_nameHold"></div>
-        <div class="info_display" id = "j_brandHold"></div>
-        <div class="info_display" id = "j_nicHold"></div>
-        <div class="info_display" id = "j_ratingHold"></div>
-        <div class="info_display" id = "j_ratioHold"></div>
-        <div class="info_display" id = "j_sizeHold"></div>
-        <div class="info_display" id = "j_notesHold"></div>
+        <div class="info_display" id="j_nameHold"></div>
+        <div class="info_display" id="j_brandHold"></div>
+        <div class="info_display" id="j_nicHold"></div>
+        <div class="info_display" id="j_ratingHold"></div>
+        <div class="info_display" id="j_ratioHold"></div>
+        <div class="info_display" id="j_sizeHold"></div>
+        <div class="info_display" id="j_notesHold"></div>
     </div>
     <div id="pInfo">
-        <div class="info_display" id = "p_nameHold"></div>
-        <div class="info_display" id = "p_brandHold"></div>
-        <div class="info_display" id = "p_typeHold"></div>
-        <div class="info_display" id = "p_notesHold"></div>
+        <div class="info_display" id="p_nameHold"></div>
+        <div class="info_display" id="p_brandHold"></div>
+        <div class="info_display" id="p_typeHold"></div>
+        <div class="info_display" id="p_notesHold"></div>
     </div>
 </main>
 </body>
