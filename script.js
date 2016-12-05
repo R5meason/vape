@@ -1,6 +1,13 @@
-/**
- * Created by Melynda Eason on 11/13/2016.
- */
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyCL2MDj_c4oPiHX4seu6TSQeuuEi51NjJk",
+    authDomain: "vapedata.firebaseapp.com",
+    databaseURL: "https://vapedata.firebaseio.com",
+    storageBucket: "vapedata.appspot.com",
+    messagingSenderId: "988632448397"
+};
+firebase.initializeApp(config);
+var fbRef = firebase.database();
 
 $(document).ready(function () {
 
@@ -70,30 +77,6 @@ var displayPartsData = function () {
         document.getElementById("p_typeHold").innerHTML = p_typeHold.join("<br>");
         document.getElementById("p_notesHold").innerHTML = p_notesHold.join("<br>");
     }
-};
-
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyCL2MDj_c4oPiHX4seu6TSQeuuEi51NjJk",
-    authDomain: "vapedata.firebaseapp.com",
-    databaseURL: "https://vapedata.firebaseio.com",
-    storageBucket: "vapedata.appspot.com",
-    messagingSenderId: "988632448397"
-};
-firebase.initializeApp(config);
-var fbRef = firebase.database();
-
-var retrieveData = function (section) {
-    fbRef.ref(section).on('value', function (snapshot) {
-        if (section === "juice") {
-            vapeData.juice = snapshot.val();
-            console.log("Juice Data: ", vapeData.juice);
-        }
-        else if (section === "parts") {
-            vapeData.parts = snapshot.val();
-            console.log("Parts Data: ", vapeData.parts);
-        }
-    });
 };
 
 
