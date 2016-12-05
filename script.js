@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function () {
-    retrieveData();
+
     console.log("Info Loaded");
 
     var query = firebase.database().ref("juice").orderByKey();
@@ -24,13 +24,13 @@ $(document).ready(function () {
         });
 });
 
-var nameHold = [];
-var brandHold = [];
-var nicHold = [];
-var ratingHold = [];
-var ratioHold = [];
-var sizeHold = [];
-var notesHold = [];
+var nameHold = ["Name"];
+var brandHold = ["Brand"];
+var nicHold = ["Nicotine"];
+var ratingHold = ["Rating"];
+var ratioHold = ["Ratio"];
+var sizeHold = ["Size"];
+var notesHold = ["Comments"];
 
 var displayJuiceData = function () {
     for (var i = 0; i < nameHold.length; i++) {
