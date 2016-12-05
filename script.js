@@ -24,7 +24,6 @@ $(document).ready(function () {
         });
 });
 
-
 var nameHold = [];
 var brandHold = [];
 var nicHold = [];
@@ -32,14 +31,16 @@ var ratingHold = [];
 var ratioHold = [];
 var sizeHold = [];
 var notesHold = [];
-var infoDisplay = [];
 
 var displayJuiceData = function () {
-    infoDisplay = [];
     for (var i = 0; i < nameHold.length; i++) {
-        // console.log(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]);
-        infoDisplay.push(nameHold[i] + " " + brandHold[i] + " " + nicHold[i] + " " + ratingHold[i] + " " + ratioHold[i] + " " + sizeHold[i] + " " + notesHold[i]+"<br>");
-        document.getElementById("jInfo").innerHTML = infoDisplay.join("")
+        document.getElementById("nameHold").innerHTML = nameHold.join("<br>");
+        document.getElementById("brandHold").innerHTML = brandHold.join("<br>");
+        document.getElementById("nicHold").innerHTML = nicHold.join("<br>");
+        document.getElementById("ratingHold").innerHTML = ratingHold.join("<br>");
+        document.getElementById("ratioHold").innerHTML = ratioHold.join("<br>");
+        document.getElementById("sizeHold").innerHTML = sizeHold.join("<br>");
+        document.getElementById("notesHold").innerHTML = notesHold.join("<br>");
     }
 };
 
