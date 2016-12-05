@@ -55,13 +55,13 @@ button {
     background-color: dodgerblue;
 }
 
-#juiceAdd {
-     display: none;
- }
+/*#juiceAdd {*/
+     /*display: none;*/
+ /*}*/
 
-#partsAdd {
-    display: none;
-}
+/*#partsAdd {*/
+    /*display: none;*/
+/*}*/
 
 .display {
     display: inline-block;

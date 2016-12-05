@@ -20,13 +20,13 @@ $(document).ready(function () {
                 console.log(childSnapshot.key);
                 console.log(childSnapshot.val());
                 var infoJ = childSnapshot.val();
-                nameHold.push(infoJ.name);
-                brandHold.push(infoJ.brand);
-                nicHold.push(infoJ.nicotine);
-                ratingHold.push(infoJ.rating);
-                ratioHold.push(infoJ.ratio);
-                sizeHold.push(infoJ.size);
-                notesHold.push(infoJ.notes);
+                j_nameHold.push(infoJ.name);
+                j_brandHold.push(infoJ.brand);
+                j_nicHold.push(infoJ.nicotine);
+                j_ratingHold.push(infoJ.rating);
+                j_ratioHold.push(infoJ.ratio);
+                j_sizeHold.push(infoJ.size);
+                j_notesHold.push(infoJ.notes);
             });
         });
     var queryP = firebase.database().ref("parts").orderByKey();
@@ -44,13 +44,13 @@ $(document).ready(function () {
         });
 });
 
-var nameHold = ["Name"];
-var brandHold = ["Brand"];
-var nicHold = ["Nicotine"];
-var ratingHold = ["Rating"];
-var ratioHold = ["Ratio"];
-var sizeHold = ["Size"];
-var notesHold = ["Comments"];
+var j_nameHold = ["Name"];
+var j_brandHold = ["Brand"];
+var j_nicHold = ["Nicotine"];
+var j_ratingHold = ["Rating"];
+var j_ratioHold = ["Ratio"];
+var j_sizeHold = ["Size"];
+var j_notesHold = ["Comments"];
 
 var p_nameHold = ["Name"];
 var p_brandHold = ["Brand"];
@@ -59,14 +59,14 @@ var p_notesHold = ["Comments"];
 
 
 var displayJuiceData = function () {
-    for (var i = 0; i < nameHold.length; i++) {
-        document.getElementById("nameHold").innerHTML = nameHold.join("<br>");
-        document.getElementById("brandHold").innerHTML = brandHold.join("<br>");
-        document.getElementById("nicHold").innerHTML = nicHold.join("<br>");
-        document.getElementById("ratingHold").innerHTML = ratingHold.join("<br>");
-        document.getElementById("ratioHold").innerHTML = ratioHold.join("<br>");
-        document.getElementById("sizeHold").innerHTML = sizeHold.join("<br>");
-        document.getElementById("notesHold").innerHTML = notesHold.join("<br>");
+    for (var i = 0; i < j_nameHold.length; i++) {
+        document.getElementById("j_nameHold").innerHTML = j_nameHold.join("<br>");
+        document.getElementById("j_brandHold").innerHTML = j_brandHold.join("<br>");
+        document.getElementById("j_nicHold").innerHTML = j_nicHold.join("<br>");
+        document.getElementById("j_ratingHold").innerHTML = j_ratingHold.join("<br>");
+        document.getElementById("j_ratioHold").innerHTML = j_ratioHold.join("<br>");
+        document.getElementById("j_sizeHold").innerHTML = j_sizeHold.join("<br>");
+        document.getElementById("j_notesHold").innerHTML = j_notesHold.join("<br>");
     }
 };
 
@@ -81,7 +81,6 @@ var displayPartsData = function () {
 
 
 var jAdd = function (name, brand, nic, rating, ratio, size, note) {
-    // console.log(name, brand, nic, rating, ratio, size, note);
     var data = {
         name: name,
         brand: brand,
