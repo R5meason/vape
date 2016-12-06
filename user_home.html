@@ -13,16 +13,16 @@
     <div class="button_divider">
         <span>Juice: </span>
         <button class="displayBtn" data-param="juiceAdd">Add</button>
-        <button class="displayBtn" data-param="" onclick="displayJuiceData()">View/Edit</button>
+        <button class="displayBtn" data-param="jInfo" onclick="displayJuiceData()">View/Edit</button>
     </div>
     <div class="button_divider">
         <span>Parts: </span>
         <button class="displayBtn" data-param="partsAdd">Add</button>
-        <button class="displayBtn" data-param="" onclick="displayPartsData()">View/Edit</button>
+        <button class="displayBtn" data-param="pInfo" onclick="displayPartsData()">View/Edit</button>
     </div>
 </header>
 <main class="user_main">
-    <div id="juiceAdd">
+    <div class="displayDiv" id="juiceAdd">
         <input type="text" placeholder="name" class="field" id="jName">
         <br>
         <input type="text" placeholder="brand" class="field" id="jBrand">
@@ -49,7 +49,7 @@
         </button>
         <div class="confirm" id="jConfirm"></div>
     </div>
-    <div id="partsAdd">
+    <div class="displayDiv" id="partsAdd">
         <input type="text" placeholder="name" class="field" id="pName">
         <br>
         <input type="text" placeholder="brand" class="field" id="pBrand">
@@ -67,7 +67,7 @@
         </button>
         <div class="confirm" id="pConfirm"></div>
     </div>
-    <div id="jInfo">
+    <div class="displayDiv" id="jInfo">
         <div class="info_display" id="j_nameHold"></div>
         <div class="info_display" id="j_brandHold"></div>
         <div class="info_display" id="j_nicHold"></div>
@@ -76,7 +76,7 @@
         <div class="info_display" id="j_sizeHold"></div>
         <div class="info_display" id="j_notesHold"></div>
     </div>
-    <div id="pInfo">
+    <div class="displayDiv" id="pInfo">
         <div class="info_display" id="p_nameHold"></div>
         <div class="info_display" id="p_brandHold"></div>
         <div class="info_display" id="p_typeHold"></div>

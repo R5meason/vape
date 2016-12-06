@@ -1,12 +1,3 @@
-var juiceEditDivOpen = false;
-var juiceAddDivOpen = false;
-var partsEditDivOpen = false;
-var partsAddDivOpen = false;
-
-
-
-
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCL2MDj_c4oPiHX4seu6TSQeuuEi51NjJk",
@@ -20,43 +11,20 @@ var fbRef = firebase.database();
 
 $(document).ready(function () {
 
-    console.log("Info Loaded");
+    console.log("Ready");
 
     $('.displayBtn').click(function () {
         var divId = $(this).attr("data-param");
+        $('.displayDiv').hide();
         $('#' + divId).show();
-        // divOpen = true;
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     var queryJ = firebase.database().ref("juice").orderByKey();
     queryJ.once("value")
         .then(function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
-                console.log(childSnapshot.key);
-                console.log(childSnapshot.val());
+                // console.log(childSnapshot.key);
+                // console.log(childSnapshot.val());
                 var infoJ = childSnapshot.val();
                 j_nameHold.push(infoJ.name);
                 j_brandHold.push(infoJ.brand);
@@ -71,8 +39,8 @@ $(document).ready(function () {
     queryP.once("value")
         .then(function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
-                console.log(childSnapshot.key);
-                console.log(childSnapshot.val());
+                // console.log(childSnapshot.key);
+                // console.log(childSnapshot.val());
                 var infoP = childSnapshot.val();
                 p_nameHold.push(infoP.name);
                 p_brandHold.push(infoP.brand);
