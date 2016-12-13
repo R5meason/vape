@@ -1,10 +1,9 @@
 * {
-    /*border: 1px solid black;*/
     font-family: sans-serif;
 }
 
 button {
-    border-radius: 5%;
+    border-radius: 10%;
 }
 
 #login_header {
@@ -54,7 +53,6 @@ button {
 
 .user_nav {
     height: 10vh;
-    /*background-color: black;*/
 }
 
 .user_main {
@@ -63,7 +61,7 @@ button {
 
 #juiceAdd {
      display: none;
- }
+}
 
 #partsAdd {
     display: none;
@@ -79,7 +77,6 @@ button {
 }
 
 .info_display {
-    /*border: 1px solid black;*/
     display: inline-block;
     padding: 0.5% 1%;
     font-size: 0.8em;

@@ -121,3 +121,11 @@ var pAdd = function (name, brand, type, note) {
     document.getElementById('pNote').value = "";
     document.getElementById("pConfirm").innerText = "Parts Info Added"
 };
+
+//TODO: display updated data after entry (currently only on page load)
+//TODO: Find local shops (location/map functionality)
+//TODO: incorporate web links to find juices online
+//TODO: rating number displays # of stars
+//TODO: upload img capability
+//TODO: Determine char limits for certain fields (notes, etc)
+//TODO: Login & user creation
